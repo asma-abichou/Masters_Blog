@@ -6,11 +6,46 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <!-- Google Font: Source Sans Pro -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+            <!-- Font Awesome Icons -->
+            <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+            <!-- overlayScrollbars -->
+            <link rel="stylesheet" href=" {{ asset('plugins/bs-stepper/css/bs-stepper.css')}}">
+            <!-- Theme style -->
+            <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('plugins/dropzone/min/dropzone.min.css') }}">
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {#{{ encore_entry_script_tags('app') }}#}
+            <!-- jQuery -->
+            <script src="plugins/jquery-knob/{{ asset('plugins/jquery/jquery.min.js') }}" defer></script>
+            <script src="{{ asset('plugins/select2/js/select2.full.min.js') }}" defer></script>
+            <!-- Bootstrap -->
+
+            <script src="{{ asset('plugins/bs-stepper/js/bs-stepper.min.js') }}" defer></script>
+            <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+            <!-- overlayScrollbars -->
+            <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js" defer></script>
+            <!-- AdminLTE App -->
+            <script src="{{ asset('dist/js/adminlte.js') }}" defer></script>
+            <script src="{{ asset('plugins/dropzone/min/dropzone.min.css') }}" defer></script>
+
+            <!-- PAGE PLUGINS -->
+            <!-- jQuery Mapael -->
+            <script src="plugins/jquery-mousewheel/jquery.mousewheel.js" defer></script>
+            <script src="plugins/raphael/raphael.min.js" defer></script>
+            <script src="plugins/jquery-mapael/jquery.mapael.min.js" defer></script>
+            <script src="plugins/jquery-mapael/maps/usa_states.min.js" defer></script>
+            <!-- ChartJS -->
+            <script src="plugins/chart.js/Chart.min.js" defer></script>
+
+            <!-- AdminLTE for demo purposes -->
+            <script src="dist/js/demo.js" defer></script>
+            <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+            <script src="dist/js/pages/dashboard2.js" defer></script>
         {% endblock %}
     </head>
     <body>
